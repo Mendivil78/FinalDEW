@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+  <meta charset="UTF-8">
+  <title>Escape From Tarkov</title>
+  <link rel="stylesheet" href="./style.css">
+  
+</head>
+<body>  
+  <div id="cabecera">
+    <h1>Alejandro Mendívil Núñez</h1>
+    <label for="urlimg">Url:</label>
+    <input type="url" name="urlimg" id="Url" placeholder="Introduzca una url">
+    <button id="anadir" type="button" onclick="Anadir(Url.value);">Añadir</button>
+    <div>
+      <label for="categorias">Eliga una categoría</label>
+      <select name="categorias" id="selector" onclick="SelectCategoria(selector.value);">
+        <option value=""> -Categorias-</option>
+        <option value="Jamones">Jamones</option>
+        <option  value="Peliculas">Peliculas</option>
+        <option value="Videojuegos">Videojuegos</option>
+      </select>
+    </div>
+  </div>
+  <div id="contenedor">
+    <div id="tercero" style="visibility:hidden">
+      <input id="link" type="text" placeholder="Introducir link">
+      <input id="titulo" type="text" placeholder="Introducir título">
+      <button id="modificar" onclick="Modificar(link.value, titulo.value);">Modificar</button>
+      <button id="anadir" onclick="Anadir(link.value, titulo.value);">Añadir</button>
+    </div>
+    <div id="cuarto" >
+      <p>Con los elemento seleccionados</p>
+      <label for="choosecat">Eliga una categoría</label>
+      <select name="choosecat" id="chosen" onclick="CambiarCate(chosen.value);">
+        <option value=""> -Categorias-</option>
+        <option value="Jamones">Jamones</option>
+        <option  value="Peliculas">Peliculas</option>
+        <option value="Videojuegos">Videojuegos</option>
+      </select>
+    </div>
+    <div id="save">
+      <button id="anadir" type="submit" onclick="Save();">Guardar</button>
+    </div>
+  </div> 
+  <script src="./script.js"></script>
+</body>
+</html>
